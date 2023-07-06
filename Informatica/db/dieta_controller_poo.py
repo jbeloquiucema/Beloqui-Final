@@ -20,7 +20,22 @@ def update_dieta(id, Restriction, Restriccion, USD):
     db.commit()
     return True
 
-
+def get_dietas():
+    db = get_db()
+    cursor = db.cursor()
+    query = "SELECT id, Restriction, Restriccion, USD FROM dietas"
+    cursor.execute(query)
+    dieta_list = cursor.fetchall()
+    list_of_dietas=[]
+    for rdieta in dieta_list:
+        id = dieta[0]
+        Restriction = dieta[1]
+        Restriccion = dieta[2]
+        USD = dieta[3]
+        dieta_to_add = Dieta(id, Restriction, Restriccion, USD)
+        list_of_dietas.append(dieta_to_add)
+    return list_of_dietas
+    
 def get_by_id(id):
     db = get_db()
     cursor = db.cursor()
