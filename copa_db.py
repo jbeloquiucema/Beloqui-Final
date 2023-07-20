@@ -7,8 +7,7 @@ def get_db():
     conn = sqlite3.connect(DATABASE_NAME)
     return conn
 
-#creo la tabla
-#recorro la lista de tablas, hay una sola
+
 def create_tables():
     tables = [
         """CREATE TABLE IF NOT EXISTS copa(
@@ -39,7 +38,7 @@ def insert_initial_data():
     table_exists = cursor.fetchone()
 
     if not table_exists:
-        # La tabla "copa" no existe, proceder con la inserción de datos
+       
         cursor.executemany("INSERT INTO copa (id, estadio, partido, precio, sector) VALUES (?, ?, ?, ?, ?)", data)
 
 
