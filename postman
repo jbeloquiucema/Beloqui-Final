@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "afa05b83-a6c6-46a2-9e93-ad82bcde5c67",
+		"name": "Final-Beloqui-josefina",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27881674",
+		"_collection_link": "https://planetary-comet-841370.postman.co/workspace/My-Workspace~e0aa7ed7-bf3f-4b03-81ef-22ce05f9a93b/collection/27881674-afa05b83-a6c6-46a2-9e93-ad82bcde5c67?action=share&creator=27881674&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "dolares y descuento",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
