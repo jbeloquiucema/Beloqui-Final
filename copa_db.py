@@ -1,7 +1,7 @@
 import sqlite3
 
 DATABASE_NAME = "copa.db"
-#importo y me conecto
+
 
 def get_db():
     conn = sqlite3.connect(DATABASE_NAME)
@@ -24,7 +24,7 @@ def create_tables():
     cursor = db.cursor()
     for table in tables:
         cursor.execute(table)
-#le agrego los datos que me da el ejercicio
+
 def insert_initial_data():
     data = [
         ("C001", "Buenos Aires Lawn Tennis Club", "Argentina-Lituania", 10000, "Esquina"),
