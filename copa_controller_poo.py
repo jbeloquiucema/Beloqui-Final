@@ -1,7 +1,7 @@
 from copa_db import get_db
 from class_copa import Copa
 
-#hago la funcion para insertar copas faltantes
+
 def insert_copa(id, estadio, partido, precio, sector):
     db = get_db()
     cursor = db.cursor()
@@ -11,7 +11,7 @@ def insert_copa(id, estadio, partido, precio, sector):
     db.commit()
     return True
 
-#esta funcion no la pide, pero puede llegar a ser util, si se desean actualizar los precios de las copas
+
 def update_copa(id, estadio, partido, precio, sector):
     db = get_db()
     cursor = db.cursor()
@@ -21,7 +21,6 @@ def update_copa(id, estadio, partido, precio, sector):
     db.commit()
     return True
 
-#esta funcion no la pide, pero sirve para borrar una copa
 def delete_copa(id):
     db = get_db()
     cursor = db.cursor()
@@ -30,7 +29,7 @@ def delete_copa(id):
     db.commit()
     return True
 
-#sirve para obtener una copa en específico de acuerdo a un id
+
 def get_by_id(id):
     db = get_db()
     cursor = db.cursor()
@@ -45,7 +44,6 @@ def get_by_id(id):
     copa = Copa(id,estadio, partido, precio, sector)
     return copa.serialize()
 
-#sirve para hacer una lisa de todas las copas disponibles
 def get_copas():
     db = get_db()
     cursor = db.cursor()
