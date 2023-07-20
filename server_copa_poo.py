@@ -6,7 +6,6 @@ from copa_db import get_db
 
 app = Flask(__name__)
 
-#comienzo a hacer las rutas que son las que va a usar el usuario para acceder a los datos
 @app.route('/api/copadavis/precios', methods=["GET"])
 def get_copas():
     copas = copa_controller_poo.get_copas()
@@ -27,11 +26,6 @@ def insert_copa():
     result = copa_controller_poo.insert_copa(id,estadio,partido,precio,sector)
     return jsonify(result)
 
-
-
-
-
-
 @app.route("/api/copadavis/comprar/<id>/cantidad/<cantidad>", methods=["GET"])
 def get_copa_by_id_psa(id, cantidad):
     try:
@@ -41,7 +35,7 @@ def get_copa_by_id_psa(id, cantidad):
             return "El ID es obligatorio.", 404
 
         xr = get_xr()
-        cantidad = int(cantidad)  # Convertir cantidad a un número entero
+        cantidad = int(cantidad)  
 
         price_peso = copa['precio'] * cantidad
         price_dolar = price_peso / xr
